@@ -51,8 +51,3 @@
 .action-button:active {
   background-color: #3c903c;
 }
-
-.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}

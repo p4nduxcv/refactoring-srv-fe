@@ -7,7 +7,7 @@ describe("Counter", () => {
     cy.get(".count-text").should("contain", "Count: 0");
 
     // Increase the count by 10
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i <= 10; i++) {
       cy.get(".action-button").contains("Increase").click();
     }
 
@@ -37,6 +37,9 @@ describe("Counter", () => {
   });
 
   it("should decrease the count by 10 and display toast message", () => {
+    // Click Reset button
+    cy.get(".action-button").contains("Reset").click();
+
     // Set the count to 0
     cy.get(".count-text").should("contain", "Count: 0");
 

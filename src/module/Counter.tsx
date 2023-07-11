@@ -11,9 +11,7 @@ const Counter: React.FC = () => {
   const increaseHandler = () => {
     if (count < limit) {
       setCount(count + 1);
-    }
-
-    if (count === limit) {
+    } else {
       toast.error(`Count cannot exceed ${limit}`, {
         position: toast.POSITION.TOP_CENTER,
       });
@@ -42,18 +40,14 @@ const Counter: React.FC = () => {
           <p className="count-text">Count: {count}</p>
           <div className="button-container">
             <button
-              //   className={`action-button ${count >= limit ? "disabled" : ""}`}
               onClick={increaseHandler}
               className="action-button"
-              //   disabled={count >= limit}
             >
               Increase
             </button>
             <button
-              //   className={`action-button ${count === 0 ? "disabled" : ""}`}
               className="action-button"
               onClick={decreaseHandler}
-              //   disabled={count === 0}
             >
               Decrease
             </button>
