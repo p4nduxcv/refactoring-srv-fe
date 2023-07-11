@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧮 Counter Component
+The Counter component is a simple React component that allows you to display a count value and perform basic count manipulation operations.
 
-## Getting Started
+## ✅ Prerequisite
+Before using the Counter component, make sure you have the following prerequisites installed:
 
-First, run the development server:
+- Node.js: >= 16.0.0
+- npm: >= 7.0.0
 
+## 🏗️ Installation
+
+1. Clone the repository.
+2. Install dependencies by running the following command:
+   ```bash
+   npm install
+
+## 👨‍💻 Usage
+
+### Development Server Setup
+To start the development server, run the following command:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+The application will be accessible at http://localhost:3000.
+
+
+### Production Server Setup
+To start the Production server, run the following command:
+
+
+```bash
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+then run 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This script starts the built production version of your Next.js application. When you run npm start, Next.js starts a server to serve the previously built production assets. This script is typically used in a production environment to serve your application to users.
 
-## Learn More
+The application will be accessible at http://localhost:3000.
 
-To learn more about Next.js, take a look at the following resources:
+## 🚩 Props
+The Counter component does not accept any props.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Testing
+To test the functionality of the Counter component use the following command
+```bash
+npm run cypress
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### ℹ️ Test Instructions
+All test instructions are inside the  ```app.cy.js``` file as comments. Here you can see the main E2E test cases instructions
 
-## Deploy on Vercel
+```javascript
+describe("Counter", () => {
+  beforeEach(() => {
+    cy.visit("http://localhost:3000");
+  });
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  it("should increase the count by 10 and display toast message", () => {
+    // Test code here...
+  });
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  it("should reset the count to 0", () => {
+    // Test code here...
+  });
+
+  it("should decrease the count by 10 and display toast message", () => {
+    // Test code here...
+  });
+});
+```
+
+## 🎬 Demos
+### Application Behaviour 
+
+https://github.com/p4nduxcv/refactoring-srv-fe/assets/43129749/4659beee-318c-4bfe-8a7c-56dc056efc9b
+
+### Testing Behaviour 
+
+https://github.com/p4nduxcv/refactoring-srv-fe/assets/43129749/2442e47b-0ccc-4132-ac79-d4b43f9a4d25
+
+
+
+
