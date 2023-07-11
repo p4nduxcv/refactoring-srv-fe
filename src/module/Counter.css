@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.counter-container {
+  text-align: center;
+}
+
+.count-text {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.action-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  margin: 0 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+.action-button:active {
+  background-color: #3c903c;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
